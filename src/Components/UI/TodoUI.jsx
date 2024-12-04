@@ -30,11 +30,15 @@ const TodoUI = () => {
     setTask(event.target.value); // Update the input value
   };
 
+  // Display the date
+  const todayDate = new Date()
+
   return (
     <>
       <div className="flex items-center justify-center min-h-screen bg-gray-700">
         <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md mx-4 sm:w-96">
           <h1 className="text-2xl sm:text-3xl font-serif text-gray-700 mb-6 text-center">
+            {todayDate.toLocaleString()}
           </h1>
           <form onSubmit={handleSubmit}>
             <input
